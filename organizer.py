@@ -2,7 +2,7 @@ import os, sys
 import jdatetime
 import time
 
-NAME_FORMAT = "Ohadi.Yasaman.cap.cn.%s.%s.%s.pdf"
+NAME_FORMAT = "FirstName.LastName.cap.cn.%s.%s.%s.pdf" # Change details based on course description
 
 # # Check for user prompt: Split single pdf, or Normal Mode.
 # print(
