@@ -2,7 +2,7 @@ import os
 from PyPDF2 import PdfReader, PdfWriter
 
 def get_files():
-    files = [file for file in os.listdir() if os.path.isfile(file) and file != 'splitter.py']
+    files = [file for file in os.listdir(path="assets/") if file.endswith('.pdf')]
     dir = enumerate(files, start=1)
     print("Choose file to split.\n")
     data = dict(dir)
@@ -11,7 +11,7 @@ def get_files():
     return data
     
 
-def split_pdf(input_file, chunk_size, output_dir=".."):
+def split_pdf(input_file, chunk_size, output_dir="."):
     """
     Splits a PDF into smaller PDFs with given chunk size.
 
@@ -23,7 +23,7 @@ def split_pdf(input_file, chunk_size, output_dir=".."):
     # Create output directory if not exists
     os.makedirs(output_dir, exist_ok=True)
 
-    reader = PdfReader(input_file)
+    reader = PdfReader(f"assets/{input_file}")
     total_pages = len(reader.pages)
 
     for i in range(0, total_pages, chunk_size):
