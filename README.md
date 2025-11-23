@@ -35,8 +35,6 @@ You must refer to your course description (gotten from Prof. Mirzaviziri himself
 
 ### 4. Run the program and Enjoy ⭐
 
-**Note: The `assets` directory contains a splitter file that you can use for chunking a huge pdf that contains a bunch of your assignments (most likely created by CamScanner) into small, equal portions.**
-
 ## Usage
 The recommended usage flow of this program is rather simple and is explained below.
 
