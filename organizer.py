@@ -31,16 +31,23 @@ print(f"Current date: {month}/{day}")
 # List the files
 print()
 print("Reading files from directory...")
-files = set([f for f in os.listdir() if os.path.isfile(f)])
+files = set([f for f in os.listdir() if os.path.isfile(f) and f.endswith('.pdf')])
 
 # Remove the script
-files.remove("organizer.py")
+# files.remove("organizer.py")
+# files.remove("splitter.py")
+# files.remove("requirements.txt")
+# files.remove("README.md")
 
 # Filter the files that are already named
 unnamed = set(filter(lambda f: NAME_FORMAT.split('.')[0] not in f, files))
 
+
 print(f"Total number of files found: {len(files)}")
 print(f"Number of Unnamed files: {len(unnamed)}")
+if not unnamed:
+    print("All files are properly named. Terminating Program!")
+    sys.exit()
 
 
 # Check unnamed files to see if they match the instructions
