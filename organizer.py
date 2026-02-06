@@ -80,6 +80,11 @@ else:
     latest = 0
 
 print(f"Found: {latest}")
+user_in = input("Start from another number? Choose: ")
+if not user_in:
+    pass
+else:
+    latest = int(user_in)
 
 # Rename the unnamed files
 print()
